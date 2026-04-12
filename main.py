@@ -7,6 +7,7 @@ from dotenv import load_dotenv
 from src.data_prep.normalizer import Normalizer
 from src.model.ngram_model import NGramModel
 from src.inference.predictor import Predictor
+from pathlib import Path
 
 load_dotenv("config/.env")
 
@@ -21,7 +22,9 @@ N= int(os.getenv("NGRAM_ORDER"))
 
 normalizer=Normalizer()
 ngrammodel=NGramModel()
-
+base = Path("data")
+(base / "processed").mkdir(parents=True, exist_ok=True)
+(base / "model").mkdir(parents=True, exist_ok=True)
 
 
 def start_dataprep():
