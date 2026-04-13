@@ -44,7 +44,8 @@ class NGramModel:
         counts = {}
 
         for i in range(len(tokens)):
-            for order in range(1, NGRAM_ORDER + 1):
+            N= int(os.getenv("NGRAM_ORDER"))
+            for order in range(1,N + 1):
                 if i < order - 1:
                     continue
                 context = " ".join(tokens[i - order + 1 : i])
@@ -75,8 +76,9 @@ class NGramModel:
             self.vocab = json.load(f)
 
     def lookup(self,context):
-        if len(context) > NGRAM_ORDER - 1:
-            startingContextSize = NGRAM_ORDER - 1
+        N= int(os.getenv("NGRAM_ORDER"))
+        if len(context) > N - 1:
+            startingContextSize = N - 1
         else:
             startingContextSize = len(context)
         
