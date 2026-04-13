@@ -124,9 +124,3 @@ class Normalizer:
             for sentence in sentences:
                 f.write(sentence.strip() + '\n')
 
-
-
-def main():
-    pass
-if __name__ == "__main__":
-    main()
