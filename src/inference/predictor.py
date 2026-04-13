@@ -17,9 +17,3 @@ class Predictor:
         context = self.map_oov(normalized_text)
         predictions = self.NGramModel.lookup(context)
         return sorted(predictions, key=predictions.get, reverse=True)[:k]
-
-def main():
-    pass
-        
-if __name__ == "__main__":
-    main()
