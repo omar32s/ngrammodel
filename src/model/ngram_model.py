@@ -1,10 +1,5 @@
 
 import json
-#A7A NEEEK 
-UNK_THRESHOLD = 10
-NGRAM_ORDER = 4
-#A7A NEEEK 
-
 
 class NGramModel:
     def __init__(self):
@@ -90,13 +85,6 @@ class NGramModel:
 
 
 def main():
-    model = NGramModel()
-    model.build_vocab("E:/AI help/AI help/data/raw/eval/train_tokens.txt")
-    model.build_counts_and_probabilities("E:/AI help/AI help/data/raw/eval/train_tokens.txt")
-    model.save_model("E:/AI help/AI help/data/raw/eval/model.json")
-    model.save_vocab("E:/AI help/AI help/data/raw/eval/vocab.json")
-    print(model.lookup("to", "the", "top"))
     
-
 if __name__ == "__main__":
     main()
