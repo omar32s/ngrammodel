@@ -25,7 +25,7 @@ ngrammodel=NGramModel()
 base = Path("data")
 (base / "processed").mkdir(parents=True, exist_ok=True)
 (base / "model").mkdir(parents=True, exist_ok=True)
-
+(base / "vocab").mkdir(parents=True, exist_ok=True)
 
 def start_dataprep():
     Loaded_data=normalizer.load(TRAIN_FILE)
