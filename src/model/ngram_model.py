@@ -83,8 +83,3 @@ class NGramModel:
                 return predictions
         return {}
 
-
-def main():
-    
-if __name__ == "__main__":
-    main()
