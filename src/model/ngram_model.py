@@ -2,7 +2,7 @@
 import json
 import sys
 import os
-threshold= int(os.getenv("UNK_THRESHOLD"))
+
 
 class NGramModel:
     def __init__(self):
@@ -11,6 +11,7 @@ class NGramModel:
 
     def build_vocab(self,token_file):
         veco = {}
+        threshold= int(os.getenv("UNK_THRESHOLD"))
         with open(token_file, 'r', encoding='utf-8') as f:
             content = f.readlines()
         
