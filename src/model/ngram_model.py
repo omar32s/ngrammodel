@@ -1,5 +1,6 @@
 
 import json
+threshold= int(os.getenv("UNK_THRESHOLD"))
 
 class NGramModel:
     def __init__(self):
@@ -19,7 +20,7 @@ class NGramModel:
                 veco[word] += 1
 
         for word in veco.keys():
-            if veco[word] > UNK_THRESHOLD:
+            if veco[word] > threshold:
                 self.vocab.append(word)
 
         return self.vocab
