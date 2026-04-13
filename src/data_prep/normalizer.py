@@ -127,22 +127,6 @@ class Normalizer:
 
 
 def main():
-    normalizer = Normalizer()
-    loadedData = normalizer.load("E:/AI help/AI help/data/raw/train")
-    cleanData = normalizer.normalize(loadedData)
-    tokens = normalizer.sentence_tokenize(cleanData)
-    normalizer.save(tokens,"E:/AI help/AI help/data/raw/eval/train_tokens.txt")
-    strippedLoadedData = normalizer.strip_gutenberg(loadedData)
-    loweredLoadedData = normalizer.lowercase(strippedLoadedData)
-    nopuncData = normalizer.remove_punctuation(loweredLoadedData)
-    noNumber = normalizer.remove_numbers(nopuncData)
-    nospacesData = normalizer.remove_whitespace(noNumber)
-
-    for file in nospacesData.keys():
-        print(f"{file}================================================================================")
-        for line in range(30):
-            print(nospacesData[file][line])
-
-
+    pass
 if __name__ == "__main__":
     main()
